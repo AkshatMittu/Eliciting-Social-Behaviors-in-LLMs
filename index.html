@@ -20,58 +20,58 @@
 <body>
   <div>
     <div class="wrapper">
-      <h1 style="font-family: &#39;Lato&#39;, sans-serif;">Your Title Here</h1>
-      <h4 style="font-family: &#39;Lato&#39;, sans-serif; ">Fall 2024 CSCI 5541 NLP: Class Project - University of Minnesota</h4>
-      <h4 style="font-family: &#39;Lato&#39;, sans-serif; ">Team Name</h4>
+      <h1 style="font-family: &#39;Lato&#39;, sans-serif;">Eliciting Collaborative or Competitive Behaviors in LLMs</h1>
+      <h4 style="font-family: &#39;Lato&#39;, sans-serif; ">Fall 2025 CSCI 5541 NLP: Class Project - University of Minnesota</h4>
+      <h4 style="font-family: &#39;Lato&#39;, sans-serif; ">SemantiX</h4>
 
       <div class="authors-wrapper">
         
         <div class="author-container">
-          <div class="author-image">
+          <!-- <div class="author-image">
                         
               <img src="">
             
             
-          </div>
+          </div> -->
           <p>
                         
-              Member 1
+              Subhadip Gosh
             
           </p>
         </div>
         
         <div class="author-container">
-          <div class="author-image">
+          <!-- <div class="author-image">
             
             <img src="">
             
-          </div>
+          </div> -->
           <p>
             
-            Member 2
+            Akshat Dasula
             
           </p>
         </div>
         
         <div class="author-container">
-          <div class="author-image">
+          <!-- <div class="author-image">
             
               <img src="">            
             
-          </div>
+          </div> -->
           <p>
-              Member 3
+              Lavanya Sekar
           </p>
         </div>
         
         <div class="author-container">
-          <div class="author-image">
+          <!-- <div class="author-image">
                         
               <img src="">
             
-          </div>
+          </div> -->
           <p>
-            Member 4
+            Sivapriya Gopi
           </p>
         </div>
         
@@ -129,44 +129,38 @@
     
     <h2 id="abstract">Abstract</h2>
 
-<p>One or two sentences on the motivation behind the problem you are solving. One or two sentences describing the approach you took. One or two sentences on the main result you obtained.</p>
-
+<p>This project aims to understand and track how large language models behave in repeated multi-agent interactions by introducing a structured hint-exchange game between two LLMs. We design a communication game that elicits cooperation or competition, and use an LLM-as-a-Judge to give feedbacks using trust and deception scores. This way we give a unique approach for behavioral drift over multiple rounds.</p>
 <hr>
 
 <h2 id="teaser">Teaser Figure</h2>
 
-<p>A figure that conveys the main idea behind the project or the main application being addressed. This figure is from <a href="https://arxiv.org/pdf/2210.07469">StyLEx</a>.</p>
-
-<p class="sys-img"><img src="./files/teaser.png" alt="imgname"></p>
+<p class="sys-img"><img src="./files/teaser.png" alt="imgname" width="550"></p>
 
 
-<h3 id="the-timeline-and-the-highlights">Any subsection</h3>
+<h3 id="the-timeline-and-the-highlights">Brief Explanation of the Flow</h3>
 
-<p>If you need to explain more about your figure</p>
+<p>The flow begins with an initialization of players' initial roles, and a starting trust score. Once a new round begins, new questions are posed. During each interaction cycle, the Hinter generates a hint (can be trustworthy or deceptive) for the Solver, who then decides whether to accept or reject it. If the hint is accepted, the Solver uses it to answer; otherwise, the Solver responds independently. After each interaction, the roles are swapped so both players take turns as Hinter and Solver. Throughout the process, data such as trust scores, deception flags, correctness, and behavioral notes are recorded. In the feedback phase, a judge evaluates the round based on correctness, deception, etc. This continues in all rounds, after each round, behavioral patterns are analyzed—such as whether a winning player deceives to stay ahead, how trust decays after deception, and whether collaboration persists despite past betrayals. The flow illustrates the nature of trust and deception dynamics in multi-agent interactions.</p>
 
 <hr>
 
-<h2 id="introduction">Introduction / Background / Motivation</h2>
+<h2 id="introduction">Introduction</h2>
 
 <p>
-<b>What did you try to do? What problem did you try to solve? Articulate your objectives using absolutely no jargon.</b>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+The field of LLMs has shown remarkable performance in linguistic and reasoning tasks, but their behavior in multi-agent, interactive settings remains a relatively unexplored domain. This project introduces controlled hint-exchange game designed to investigate how two LLMs communicate, cooperate, or compete when paired in a shared environment with incentive structures. The core motive is to determine if LLMs develop adaptive strategies, such as trust and cooperation, or exhibit behaviors like deception and competition, through repeated interaction and feedback. This study is grounded in established communication and behavioral models, including Social Exchange Theory, Reciprocity and Trust Models, allowing for observation of whether LLMs bring human patterns of trust formation and social signaling.
 </p>
 
 <p>
 <b>How is it done today, and what are the limits of current practice?</b>
 </p>
 <p>
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Today, multi-agent LLM research primarily studies collaboration or deception in isolation, without a unified lens on how these behaviors evolve through repeated interaction. Frameworks such as MARBLE explore coordination and task-sharing among LLMs in collaborative or competitive tasks, but lack adaptive incentive structures to model trust or betrayal dynamics over time. Similarly, OpenDeception provides the first benchmark for LLM-generated deception, yet focuses only on single-turn interactions without feedback or reciprocity, limiting its insight into long-term behavioral evolution. Therefore, current practice emphasizes performance or dialogue quality rather than quantifying emergent social factors like trust recovery, cooperation decay, or deception frequency.Our proposed hint-based game framework departs significantly from this by introducing a prompt-level, reproducible setup that integrates adaptive trust updates, role switching switching, and LLM-as-a-Judge feedback, without any gradient training or task-specific tuning. This allows transparent, theory-grounded observation of how trust, cooperation, and deception co-evolve across rounds
 <p>
 
 <p>
 <b>Who cares? If you are successful, what difference will it make?</b>
 </p>
 <p>
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+If successful, this work will define how we evaluate and align multi-agent systems, revealing whether LLMs can develop trust, reciprocity, or deception under dynamic incentives. Understanding these behaviors is critical for safe deployment of autonomous AI ecosystems where social reasoning errors could amplify bias, manipulation, or misinformation.
 </p>
 
 <hr>
@@ -174,20 +168,19 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 <h2 id="approach">Approach</h2>
 
 <p>
-<b>What did you do exactly? How did you solve the problem? Why did you think it would be successful? Is anything new in your approach?</b>
+We designed and implemented a hint-exchange framework where two LLMs interact over repeated rounds as Hinter and Solver, with a third Judge LLM evaluating trust, cooperation, and deception. Each round, the hinter provides a hint which can be truthful or misleading and the solver decides whether to use it based on a dynamically updated trust score. The Judge then analyses correctness, hint honesty, and cooperation intent, feeding this feedback into the next round. This closed-loop setup would elicit social behaviors like trust, deception, or reciprocity relying solely on in-context adaptation (feedbacks over rounds).
 </p>
 
 <p>
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+We believed this approach would succeed because it capture and tracks social reasoning signals (trust, deception) from tasks using short, structured interactions. The novelty lies in combining theory-grounded social models (e.g., Social Exchange Theory) with prompt-level behavioral analysis, enabling reproducible study of eliciting LLM cooperation and deception.</p>
 
 <p>
-<b>What problems did you anticipate? What problems did you encounter? Did the very first thing you tried work?</b>
+We anticipated challenges like LLM inconsistency (different or unreasonable behaviors) and trust score instability over multiple rounds. We took an iterative approach by defining necessary steps and there were challenges in almost every step taken, which is only few steps worked in their first try but not all. In practice, we encountered issues where the solver ignored reliable hints or over-trusted deceptive ones, causing unstable behavior and  cooperation. The first few implementations often failed because LLMs did not strategize and chose behaviors randomly; only after introducing explicit incentive framing, trust-memory prompts and iterative prompt optimization they showed meaningful behavioral differences.
 </p>
-
+<!-- 
 <p>
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-</p>
+</p> -->
 
 <hr>
     
@@ -196,50 +189,54 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 <b>How did you measure success? What experiments were used? What were the results, both quantitative and qualitative? Did you succeed? Did you fail? Why?</b>
 </p>
 <p>
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+We measured success by tracking the evolution of trust scores, deception flags, and correctness across multiple rounds of interaction. 
+This can be put as the quantitative results by analyzing trust, deception scores against correctness scores. The idea was to bring out social behaviors in LLMs without explicitly telling them to do so. 
+We measured success by seeing if these behaviors emerged naturally from the interactions, and whether they aligned with human-like patterns of cooperation and deception. (a Qualitative analysis)
+Our success can be defined by the following behaviors we observed: 
+<ul>
+  <li>1) The Solver identifies misleading or redundant hints and analyzes whether they can still be used effectively. This directly influences the trust score assigned to the Hinter.</li>
+
+  <li>2) Change in trust scores are meaningful and not random</li>
+
+  <li>3) Deception impacts trust scores, but the Solver’s reaction is measured rather than impulsive (though occasionally reactive under repeated deception).</li>
+
+  <ul>
+    <li>3.1) After detecting mild deception in Round 2, the Solver lowered trust, but when the Hinter returned to being helpful, the Solver restored it, trust increased to <strong>5/5</strong> in later rounds.</li>
+    <li>3.2) The Hinter only deceives near the end of the game, never during high-risk middle rounds. In Rounds 9–10, deception reappears despite established trust, showing awareness of endgame payoff.</li>
+    <li>3.3) The Hinter expresses reasoning such as “They may retaliate in the final round” or “They’re likely to lower trust now,” revealing strategic behavior.</li>
+  </ul>
+
+  <li>4) Both agents maintain cooperative behavior but remain wary of potential deception.</li>
+
+  <li> 5) When deceptive hints are given and trusted, the Solver often fails to solve the task correctly.</li>
+
+  <li>6)  Even after multiple deceptions, trustworthy hints are still offered trying to gain trust and shift towards cooperation, and the Solver occasionally decides to take calculated risks and trust again.</li>
+
+  <li>7) The agents never reach unconditional or permanent trust, maintaining a balanced state of cautious cooperation.</li>
+</ul>
 </p>
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><strong>Experiment</strong></th>
-      <th style="text-align: center">1</th>
-      <th style="text-align: center">2</th>
-      <th style="text-align: center">3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><strong>Sentence</strong></td>
-      <td style="text-align: center">Example 1</td>
-      <td style="text-align: center">Example 2</td>
-      <td style="text-align: center">Example 3</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Errors</strong></td>
-      <td style="text-align: center">error A, error B, error C</td>
-      <td style="text-align: center">error C</td>
-      <td style="text-align: center">error B</td>
-    </tr>
-  </tbody>
-  <caption>Table 1. This is Table 1's caption</caption>
-</table>
-<br>
-<div style="text-align: center;">
-<img style="height: 300px;" alt="" src="./files/results.png">
-</div>
-<br><br>
+
+<p>
+We would like to define this as partial success, some of the behaviors were bizarre and unexpected. Such as Solver’s deception did not penalize the trust score properly which affected next rounds as models are heavily reliant on these scores rather than deception behaviors. One possible reason might be due to running this framework for less number of rounds.
+</p>
 
 <hr>
 
 
 
-<h2 id="conclusion">Conclustion and Future Work</h2>
+<h2 id="conclusion">Conclusion and Future Work</h2>
 <p>
 
-  How easily are your results able to be reproduced by others?
-  Did your dataset or annotation affect other people's choice of research or development projects to undertake?
-  Does your work have potential harm or risk to our society? What kinds? If so, how can you address them?
-  What limitations does your model have? How can you extend your work for future research?</p>
+  This work demonstrates that structured, repeated interactions between LLMs can elicit measurable social behaviors such as cooperation and deception. Through the hint-exchange framework, where agents alternate as Hinter and Solver and are evaluated by a Judge, we observed behavior patterns like strategic deception, trust erosion, aligning with human-inspired theories of social exchange and communication. By using behavioral scores (trust scores) and round-based feedback, this project tracks social behaviors in a multi-agent environment. The findings highlight that even without explicit fine-tuning, LLMs exhibit complex behaviors.
+</p>
+<p>
+  The framework is very straight forward can easily be reproduced by others, as it relies on prompt-based interactions and does not require any fine-tuning or training. We use public datasets and models. Athough some model's might require API access which is an individual's choice to use them. The code and prompts will be made available for others to use and modify.
+  We don't build any dataset or annotation, but we use existing datasets. We don't expect our work to have any potential harm or risk to our society, but rather should work as a potential way to understand how agents can be deployed in real-life applications where these social behaviors play an important role. </p>
+<p>
+  As our next steps (by the end of this semester), we plan to have trust drift analysis (how trust changes gradually rather than abruptly), hint honesty scoring to bring more behaviors, where judge tells if the hint was correct or not even if the hinter says its correct, and also incorporating previous explanations bring more dynamic nature to the framework. We also aim to use complex datasets to pose questions, as current tasks from GSM8K often allow solvers to succeed without relying on hints, which reduces the need for genuine collaboration. We also want to change the current LLMs and use larger models as they are expected to bring out real and interesting behavior patterns.
+  This work can be extended in future research by incorporating complex tasks, extending to more than just 2 behavior patterns and having more than 2 agents in the environment.
+
+</p>
 
 
 <hr>
