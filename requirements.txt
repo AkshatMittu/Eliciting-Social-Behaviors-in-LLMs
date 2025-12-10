@@ -1,0 +1,8 @@
+pandas
+datasets
+tqdm
+numpy
+mistralai
+google-genai
+torch
+groq
