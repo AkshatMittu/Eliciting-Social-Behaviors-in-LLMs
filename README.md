@@ -68,4 +68,5 @@ We evaluated models including Gemini, Groq, Phi, Qwen, and Mistral.
 ### Execution
 `python main.py`
 
-
+---
+**Project Website:** https://akshatmittu.github.io/Eliciting-Collaborative-and-Competitive-Behaviors-in-LLMs/
